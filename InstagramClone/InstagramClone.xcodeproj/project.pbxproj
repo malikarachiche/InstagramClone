@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		459EEBD0264451D9000CE659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459EEBCF264451D9000CE659 /* AppDelegate.swift */; };
 		459EEBD2264451D9000CE659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459EEBD1264451D9000CE659 /* SceneDelegate.swift */; };
-		459EEBD4264451D9000CE659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459EEBD3264451D9000CE659 /* ViewController.swift */; };
+		459EEBD4264451D9000CE659 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459EEBD3264451D9000CE659 /* HomeViewController.swift */; };
 		459EEBD9264451DA000CE659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459EEBD8264451DA000CE659 /* Assets.xcassets */; };
 		459EEBDC264451DA000CE659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459EEBDA264451DA000CE659 /* LaunchScreen.storyboard */; };
 		45B94C7326445AEC00EFDB61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45B94C7226445AEC00EFDB61 /* GoogleService-Info.plist */; };
+		45B94C782644614D00EFDB61 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94C772644614D00EFDB61 /* TabBarController.swift */; };
+		45B94C82264464E500EFDB61 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94C81264464E500EFDB61 /* SearchViewController.swift */; };
+		45B94C852644659300EFDB61 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94C842644659300EFDB61 /* ReelsViewController.swift */; };
+		45B94C882644659C00EFDB61 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94C872644659C00EFDB61 /* ShopViewController.swift */; };
+		45B94C8B264465A600EFDB61 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94C8A264465A600EFDB61 /* ProfileViewController.swift */; };
 		CE9060ECFFF65DF0CE1C339B /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1FEB9FB6159D0C0267F40 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +28,16 @@
 		459EEBCC264451D9000CE659 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459EEBCF264451D9000CE659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459EEBD1264451D9000CE659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		459EEBD3264451D9000CE659 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		459EEBD3264451D9000CE659 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		459EEBD8264451DA000CE659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		459EEBDB264451DA000CE659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		459EEBDD264451DA000CE659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45B94C7226445AEC00EFDB61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45B94C772644614D00EFDB61 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		45B94C81264464E500EFDB61 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		45B94C842644659300EFDB61 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		45B94C872644659C00EFDB61 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		45B94C8A264465A600EFDB61 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,15 +73,68 @@
 		459EEBCE264451D9000CE659 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				45B94C762644613400EFDB61 /* HomeScreen */,
+				45B94C7D2644648600EFDB61 /* Search */,
+				45B94C7E2644649600EFDB61 /* Reels */,
+				45B94C7F2644649C00EFDB61 /* Shop */,
+				45B94C80264464A300EFDB61 /* Profile */,
+				45B94C752644612800EFDB61 /* TabBar */,
 				459EEBCF264451D9000CE659 /* AppDelegate.swift */,
 				459EEBD1264451D9000CE659 /* SceneDelegate.swift */,
-				459EEBD3264451D9000CE659 /* ViewController.swift */,
 				459EEBD8264451DA000CE659 /* Assets.xcassets */,
 				459EEBDA264451DA000CE659 /* LaunchScreen.storyboard */,
 				459EEBDD264451DA000CE659 /* Info.plist */,
 				45B94C7226445AEC00EFDB61 /* GoogleService-Info.plist */,
 			);
 			path = InstagramClone;
+			sourceTree = "<group>";
+		};
+		45B94C752644612800EFDB61 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				45B94C772644614D00EFDB61 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		45B94C762644613400EFDB61 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				459EEBD3264451D9000CE659 /* HomeViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		45B94C7D2644648600EFDB61 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				45B94C81264464E500EFDB61 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		45B94C7E2644649600EFDB61 /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				45B94C842644659300EFDB61 /* ReelsViewController.swift */,
+			);
+			path = Reels;
+			sourceTree = "<group>";
+		};
+		45B94C7F2644649C00EFDB61 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				45B94C872644659C00EFDB61 /* ShopViewController.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		45B94C80264464A300EFDB61 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				45B94C8A264465A600EFDB61 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		57D845E0E0F088F9E91EF114 /* Pods */ = {
@@ -103,6 +166,7 @@
 				459EEBC9264451D9000CE659 /* Frameworks */,
 				459EEBCA264451D9000CE659 /* Resources */,
 				93082E91A798216B853154AF /* [CP] Embed Pods Frameworks */,
+				45B94C8D264487FF00EFDB61 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -159,6 +223,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		45B94C8D264487FF00EFDB61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		93082E91A798216B853154AF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,8 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				459EEBD4264451D9000CE659 /* ViewController.swift in Sources */,
+				45B94C82264464E500EFDB61 /* SearchViewController.swift in Sources */,
+				45B94C782644614D00EFDB61 /* TabBarController.swift in Sources */,
+				459EEBD4264451D9000CE659 /* HomeViewController.swift in Sources */,
 				459EEBD0264451D9000CE659 /* AppDelegate.swift in Sources */,
+				45B94C852644659300EFDB61 /* ReelsViewController.swift in Sources */,
+				45B94C882644659C00EFDB61 /* ShopViewController.swift in Sources */,
+				45B94C8B264465A600EFDB61 /* ProfileViewController.swift in Sources */,
 				459EEBD2264451D9000CE659 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
