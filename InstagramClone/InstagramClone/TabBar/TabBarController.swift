@@ -17,14 +17,20 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = [createController(title: "Home", imageName: "home", tabVC: homeVC),
-                           createController(title: "Search", imageName: "search", tabVC: searchVC),
-                           createController(title: "Reels", imageName: "reels", tabVC: reelsVC),
-                           createController(title: "Shop", imageName: "shop", tabVC: shopVC),
-                           createController(title: "Profile", imageName: "profile", tabVC: profileVC)]
+        viewControllers = [createController(imageName: "home", tabVC: homeVC),
+                           createController(imageName: "search", tabVC: searchVC),
+                           createController(imageName: "reels", tabVC: reelsVC),
+                           createController(imageName: "shop", tabVC: shopVC),
+                           createController(imageName: "profile", tabVC: profileVC)]
     }
 
-    private func createController(title: String, imageName: String, tabVC: UIViewController) -> UINavigationController {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBar.frame.size.height = 90
+        tabBar.frame.origin.y = view.frame.height - 90
+    }
+
+    private func createController(imageName: String, tabVC: UIViewController) -> UINavigationController {
         let recentVC = UINavigationController(rootViewController: tabVC)
 
         switch imageName {
