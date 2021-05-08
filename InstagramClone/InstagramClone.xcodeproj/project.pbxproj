@@ -22,6 +22,8 @@
 		45B94CC92644986100EFDB61 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CC82644986100EFDB61 /* PostsTableViewCell.swift */; };
 		45B94CCC26449ECA00EFDB61 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CCB26449ECA00EFDB61 /* StoryCollectionViewCell.swift */; };
 		45B94CCF2644B63800EFDB61 /* PostsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CCE2644B63800EFDB61 /* PostsHeaderView.swift */; };
+		45B94CD426464DD900EFDB61 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CD326464DD900EFDB61 /* LikesViewController.swift */; };
+		45B94CD726464E6800EFDB61 /* LikesProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */; };
 		CE9060ECFFF65DF0CE1C339B /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1FEB9FB6159D0C0267F40 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		45B94CC82644986100EFDB61 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		45B94CCB26449ECA00EFDB61 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		45B94CCE2644B63800EFDB61 /* PostsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsHeaderView.swift; sourceTree = "<group>"; };
+		45B94CD326464DD900EFDB61 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
+		45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		459EEBCE264451D9000CE659 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				45B94CD226464D9A00EFDB61 /* Likes */,
 				45B94C762644613400EFDB61 /* HomeScreen */,
 				45B94C7D2644648600EFDB61 /* Search */,
 				45B94C7E2644649600EFDB61 /* Reels */,
@@ -147,6 +152,15 @@
 				45B94C8A264465A600EFDB61 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		45B94CD226464D9A00EFDB61 /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				45B94CD326464DD900EFDB61 /* LikesViewController.swift */,
+				45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */,
+			);
+			path = Likes;
 			sourceTree = "<group>";
 		};
 		57D845E0E0F088F9E91EF114 /* Pods */ = {
@@ -303,7 +317,9 @@
 				45B94C782644614D00EFDB61 /* TabBarController.swift in Sources */,
 				45B94CCC26449ECA00EFDB61 /* StoryCollectionViewCell.swift in Sources */,
 				45B94CC62644985500EFDB61 /* StoriesTableViewCell.swift in Sources */,
+				45B94CD426464DD900EFDB61 /* LikesViewController.swift in Sources */,
 				459EEBD4264451D9000CE659 /* HomeViewController.swift in Sources */,
+				45B94CD726464E6800EFDB61 /* LikesProfileTableViewCell.swift in Sources */,
 				45B94CCF2644B63800EFDB61 /* PostsHeaderView.swift in Sources */,
 				459EEBD0264451D9000CE659 /* AppDelegate.swift in Sources */,
 				45B94C852644659300EFDB61 /* ReelsViewController.swift in Sources */,

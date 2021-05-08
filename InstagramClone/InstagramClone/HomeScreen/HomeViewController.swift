@@ -118,7 +118,7 @@ extension HomeViewController: UITableViewDataSource {
             cell.captionLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac rhoncus ipsum, et elementum eros."
             cell.viewAllCommentsLabel.text = "View all 29 comments"
             cell.timePostedLabel.text = "32 minutes ago"
-            cell.likeLabelAction = { print("Like label tapped") }
+            cell.likeLabelAction = { [weak self] in self?.navigationController?.pushViewController(LikesViewController(), animated: true) }
             cell.likeAction = { print("Like tapped") }
             cell.commentAction = { print("Comment tapped") }
             cell.shareAction = { print("Share tapped") }
