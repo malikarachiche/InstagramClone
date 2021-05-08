@@ -9,13 +9,6 @@ import UIKit
 
 class StoriesTableViewCell: UITableViewCell {
     static let reUse = "StoriesTableViewCell"
-
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .orange
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -43,16 +36,11 @@ class StoriesTableViewCell: UITableViewCell {
     
     func setUpView() {
         contentView.backgroundColor = .clear
-        contentView.addSubview(containerView)
-        containerView.addSubview(collectionView)
-        
-        containerView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-            make.height.equalTo(120)
-        }
+        contentView.addSubview(collectionView)
         
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
+            make.height.equalTo(120)
         }
     }
 }

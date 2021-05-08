@@ -10,28 +10,29 @@ import UIKit
 class StoryCollectionViewCell: UICollectionViewCell {
     static let reUse = "StoryCollectionViewCell"
     
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .clear
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    var storyAction: (() -> Void)?
     
     lazy var userImageView: UIImageView = {
+        let imageGR = UITapGestureRecognizer(target: self, action: #selector(storyTapped))
         let userImageView = UIImageView()
         userImageView.contentMode = .scaleAspectFill
         userImageView.clipsToBounds = true
         userImageView.backgroundColor = .systemGray3
         userImageView.layer.cornerRadius = 36
+        userImageView.isUserInteractionEnabled = true
+        userImageView.addGestureRecognizer(imageGR)
         return userImageView
     }()
     
     lazy var usernameLabel: UILabel = {
+        let labelGR = UITapGestureRecognizer(target: self, action: #selector(storyTapped))
         let label = UILabel()
         label.font = label.font.withSize(12)
         label.textAlignment = .center
         label.textColor = .label
         label.numberOfLines = 1
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(labelGR)
         return label
     }()
     
@@ -39,7 +40,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [userImageView, usernameLabel])
         stackView.axis = .vertical
         stackView.alignment = .fill
-        stackView.distribution = .fill
+        stackView.distribution = .fillProportionally
         stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -56,23 +57,18 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     func setUpView() {
         contentView.backgroundColor = .clear
-        contentView.addSubview(containerView)
-        containerView.addSubview(stackView)
+        contentView.addSubview(stackView)
         
-        containerView.snp.makeConstraints { (make) in
-            make.width.equalTo(80)
-            make.edges.equalToSuperview()
-        }
         userImageView.snp.makeConstraints { (make) in
             make.height.width.equalTo(72)
         }
         
         stackView.snp.makeConstraints { (make) in
-            make.centerX.centerY.equalToSuperview()
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.leading.equalTo(8)
+            make.trailing.equalTo(-8)
+            make.top.bottom.equalToSuperview()
         }
     }
     
-    
+    @objc func storyTapped() { storyAction?() }
 }

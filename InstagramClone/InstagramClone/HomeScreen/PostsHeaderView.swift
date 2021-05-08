@@ -9,29 +9,42 @@ import UIKit
 
 class PostsHeaderView: UIView {
     
+    var profileAction: (() -> Void)?
+    var subtitleAction: (() -> Void)?
+    var optionsAction: (() -> Void)?
+    
     lazy var imageView: UIImageView = {
+        let imageGR = UITapGestureRecognizer(target: self, action: #selector(profileTapped))
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .systemGray3
         imageView.layer.cornerRadius = 20
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(imageGR)
         return imageView
     }()
     
     lazy var usernameLabel: UILabel = {
+        let labelGR = UITapGestureRecognizer(target: self, action: #selector(profileTapped))
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .label
         label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 17)
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(labelGR)
         return label
     }()
     
     lazy var subtitleLabel: UILabel = {
+        let labelGR = UITapGestureRecognizer(target: self, action: #selector(subtitleTapped))
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .label
         label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(labelGR)
         return label
     }()
     
@@ -50,6 +63,7 @@ class PostsHeaderView: UIView {
         button.tintColor = .label
         button.backgroundColor = .clear
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(optionsTapped), for: .touchUpInside)
         return button
     }()
     
@@ -88,4 +102,8 @@ class PostsHeaderView: UIView {
             make.width.equalTo(24)
         }
     }
+    
+    @objc func profileTapped() { profileAction?() }
+    @objc func subtitleTapped() { subtitleAction?() }
+    @objc func optionsTapped() { optionsAction?() }
 }

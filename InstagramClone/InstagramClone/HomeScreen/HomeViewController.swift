@@ -57,19 +57,19 @@ class HomeViewController: UIViewController {
     }
     
     @objc func messageTapped() {
-        
+        print("Message tapped")
     }
     
     @objc func activityTapped() {
-        
+        print("Activity tapped")
     }
     
     @objc func addPostTapped() {
-        
+        print("add post tapped")
     }
     
     @objc func logoTapped() {
-        
+        print("Logo tapped")
     }
 }
 
@@ -79,6 +79,9 @@ extension HomeViewController: UITableViewDelegate {
             let view = PostsHeaderView()
             view.usernameLabel.text = "sportscenter"
             view.subtitleLabel.text = "Boston, Massachusetts"
+            view.profileAction = { print("Profile tapped") }
+            view.subtitleAction = { print("Subtitle tapped") }
+            view.optionsAction = { print("Options tapped") }
             return view
         }()
         return headerView
@@ -112,7 +115,14 @@ extension HomeViewController: UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: PostsTableViewCell.reUse) as! PostsTableViewCell
             cell.likesLabel.text = "592 likes"
-            cell.captionLabel.text = "Watch these awesome highlights!"
+            cell.captionLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac rhoncus ipsum, et elementum eros."
+            cell.viewAllCommentsLabel.text = "View all 29 comments"
+            cell.timePostedLabel.text = "32 minutes ago"
+            cell.likeLabelAction = { print("Like label tapped") }
+            cell.likeAction = { print("Like tapped") }
+            cell.commentAction = { print("Comment tapped") }
+            cell.shareAction = { print("Share tapped") }
+            cell.saveAction = { print("Save tapped") }
             return cell
         }
     }
@@ -136,6 +146,7 @@ extension HomeViewController: UICollectionViewDataSource {
         } else {
             cell.usernameLabel.text = "fro_fro23"
         }
+        cell.storyAction = { print("Story at index \(indexPath.row) tapped")}
         return cell
     }
     
