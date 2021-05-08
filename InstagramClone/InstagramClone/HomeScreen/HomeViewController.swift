@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.allowsSelection = false
+        tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 500
         tableView.showsVerticalScrollIndicator = false
@@ -54,6 +55,8 @@ class HomeViewController: UIViewController {
         let instagramLogo = UIBarButtonItem(title: "Instagram", style: .plain, target: self, action: #selector(logoTapped))
         instagramLogo.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 22)!], for: .normal)
         navigationItem.leftBarButtonItems = [instagramLogo]
+        
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @objc func messageTapped() {

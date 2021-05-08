@@ -24,6 +24,8 @@
 		45B94CCF2644B63800EFDB61 /* PostsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CCE2644B63800EFDB61 /* PostsHeaderView.swift */; };
 		45B94CD426464DD900EFDB61 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CD326464DD900EFDB61 /* LikesViewController.swift */; };
 		45B94CD726464E6800EFDB61 /* LikesProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */; };
+		45B94CF5264719CD00EFDB61 /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CF4264719CD00EFDB61 /* FollowButton.swift */; };
+		45B94CFC2647434D00EFDB61 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B94CFB2647434D00EFDB61 /* FontStyle.swift */; };
 		CE9060ECFFF65DF0CE1C339B /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C1FEB9FB6159D0C0267F40 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		45B94CCE2644B63800EFDB61 /* PostsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsHeaderView.swift; sourceTree = "<group>"; };
 		45B94CD326464DD900EFDB61 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesProfileTableViewCell.swift; sourceTree = "<group>"; };
+		45B94CF4264719CD00EFDB61 /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
+		45B94CFB2647434D00EFDB61 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		459EEBCE264451D9000CE659 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				45B94CF3264719B400EFDB61 /* CustomUI */,
 				45B94CD226464D9A00EFDB61 /* Likes */,
 				45B94C762644613400EFDB61 /* HomeScreen */,
 				45B94C7D2644648600EFDB61 /* Search */,
@@ -161,6 +166,15 @@
 				45B94CD626464E6800EFDB61 /* LikesProfileTableViewCell.swift */,
 			);
 			path = Likes;
+			sourceTree = "<group>";
+		};
+		45B94CF3264719B400EFDB61 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				45B94CF4264719CD00EFDB61 /* FollowButton.swift */,
+				45B94CFB2647434D00EFDB61 /* FontStyle.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		57D845E0E0F088F9E91EF114 /* Pods */ = {
@@ -315,6 +329,7 @@
 			files = (
 				45B94C82264464E500EFDB61 /* SearchViewController.swift in Sources */,
 				45B94C782644614D00EFDB61 /* TabBarController.swift in Sources */,
+				45B94CFC2647434D00EFDB61 /* FontStyle.swift in Sources */,
 				45B94CCC26449ECA00EFDB61 /* StoryCollectionViewCell.swift in Sources */,
 				45B94CC62644985500EFDB61 /* StoriesTableViewCell.swift in Sources */,
 				45B94CD426464DD900EFDB61 /* LikesViewController.swift in Sources */,
@@ -324,6 +339,7 @@
 				459EEBD0264451D9000CE659 /* AppDelegate.swift in Sources */,
 				45B94C852644659300EFDB61 /* ReelsViewController.swift in Sources */,
 				45B94C882644659C00EFDB61 /* ShopViewController.swift in Sources */,
+				45B94CF5264719CD00EFDB61 /* FollowButton.swift in Sources */,
 				45B94CC92644986100EFDB61 /* PostsTableViewCell.swift in Sources */,
 				45B94C8B264465A600EFDB61 /* ProfileViewController.swift in Sources */,
 				459EEBD2264451D9000CE659 /* SceneDelegate.swift in Sources */,

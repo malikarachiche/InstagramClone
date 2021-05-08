@@ -70,7 +70,7 @@ class PostsTableViewCell: UITableViewCell {
     lazy var likesLabel: UILabel = {
         let label = UILabel()
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(likeLabelTapped))
-        label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
+        label.font = UIFont(name: HelveticaFont.medium, size: 15)
         label.textAlignment = .left
         label.textColor = .label
         label.backgroundColor = .clear
@@ -82,7 +82,7 @@ class PostsTableViewCell: UITableViewCell {
     lazy var captionLabel: UILabel = {
         let label = UILabel()
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(commentTapped))
-        label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
+        label.font = UIFont(name: HelveticaFont.medium, size: 15)
         label.textAlignment = .left
         label.textColor = .label
         label.backgroundColor = .clear
@@ -96,7 +96,7 @@ class PostsTableViewCell: UITableViewCell {
     lazy var viewAllCommentsLabel: UILabel = {
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(commentTapped))
         let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
+        label.font = UIFont(name: HelveticaFont.medium, size: 15)
         label.textAlignment = .left
         label.textColor = .secondaryLabel
         label.backgroundColor = .clear
@@ -107,7 +107,7 @@ class PostsTableViewCell: UITableViewCell {
     
     lazy var timePostedLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 12)
+        label.font = UIFont(name: HelveticaFont.medium, size: 12)
         label.textAlignment = .left
         label.textColor = .secondaryLabel
         label.backgroundColor = .clear

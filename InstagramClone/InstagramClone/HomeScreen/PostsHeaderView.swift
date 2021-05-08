@@ -31,7 +31,7 @@ class PostsHeaderView: UIView {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .label
-        label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 17)
+        label.font = UIFont(name: HelveticaFont.medium, size: 17)
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(labelGR)
         return label
@@ -42,7 +42,7 @@ class PostsHeaderView: UIView {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .label
-        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
+        label.font = UIFont(name: HelveticaFont.regular, size: 14)
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(labelGR)
         return label

@@ -27,7 +27,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     lazy var usernameLabel: UILabel = {
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(storyTapped))
         let label = UILabel()
-        label.font = label.font.withSize(12)
+        label.font = UIFont(name: HelveticaFont.medium, size: 12)
         label.textAlignment = .center
         label.textColor = .label
         label.numberOfLines = 1
