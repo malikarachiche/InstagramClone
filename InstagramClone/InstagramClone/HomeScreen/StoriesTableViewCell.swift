@@ -14,7 +14,7 @@ class StoriesTableViewCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: -12)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
         layout.minimumLineSpacing = 12
         layout.minimumInteritemSpacing = 12
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -40,7 +40,7 @@ class StoriesTableViewCell: UITableViewCell {
         
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
-            make.height.equalTo(120)
+            make.height.equalTo(112)
         }
     }
 }

@@ -26,7 +26,7 @@ class LikesProfileTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .label
-        label.font = UIFont(name: HelveticaFont.medium, size: 17)
+        label.font = UIFont(name: HelveticaFont.medium, size: 16)
         return label
     }()
     
@@ -34,7 +34,7 @@ class LikesProfileTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .secondaryLabel
-        label.font = UIFont(name: HelveticaFont.regular, size: 15)
+        label.font = UIFont(name: HelveticaFont.regular, size: 14)
         return label
     }()
     
@@ -50,7 +50,7 @@ class LikesProfileTableViewCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.spacing = 2
+        stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

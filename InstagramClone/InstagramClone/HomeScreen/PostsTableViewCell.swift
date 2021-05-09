@@ -96,7 +96,7 @@ class PostsTableViewCell: UITableViewCell {
     lazy var viewAllCommentsLabel: UILabel = {
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(commentTapped))
         let label = UILabel()
-        label.font = UIFont(name: HelveticaFont.medium, size: 15)
+        label.font = UIFont(name: HelveticaFont.regular, size: 15)
         label.textAlignment = .left
         label.textColor = .secondaryLabel
         label.backgroundColor = .clear
@@ -152,7 +152,7 @@ class PostsTableViewCell: UITableViewCell {
         
         postImageView.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
-            make.height.equalTo(375)
+            make.height.equalTo(470)
         }
         
         buttonStackView.snp.makeConstraints { (make) in

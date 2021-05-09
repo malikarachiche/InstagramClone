@@ -18,7 +18,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         userImageView.contentMode = .scaleAspectFill
         userImageView.clipsToBounds = true
         userImageView.backgroundColor = .systemGray3
-        userImageView.layer.cornerRadius = 36
+        userImageView.layer.cornerRadius = 32
         userImageView.isUserInteractionEnabled = true
         userImageView.addGestureRecognizer(imageGR)
         return userImageView
@@ -27,7 +27,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     lazy var usernameLabel: UILabel = {
         let labelGR = UITapGestureRecognizer(target: self, action: #selector(storyTapped))
         let label = UILabel()
-        label.font = UIFont(name: HelveticaFont.medium, size: 12)
+        label.font = UIFont(name: HelveticaFont.regular, size: 12)
         label.textAlignment = .center
         label.textColor = .label
         label.numberOfLines = 1
@@ -40,7 +40,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [userImageView, usernameLabel])
         stackView.axis = .vertical
         stackView.alignment = .fill
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -60,12 +60,12 @@ class StoryCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(stackView)
         
         userImageView.snp.makeConstraints { (make) in
-            make.height.width.equalTo(72)
+            make.height.width.equalTo(64)
         }
         
         stackView.snp.makeConstraints { (make) in
-            make.leading.equalTo(8)
-            make.trailing.equalTo(-8)
+            make.leading.equalToSuperview().offset(8)
+            make.trailing.equalToSuperview().offset(-8)
             make.top.bottom.equalToSuperview()
         }
     }
